@@ -1,12 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
 #include <unistd.h>
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <netinet/in.h>
+
+
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <string.h>
 #include <arpa/inet.h> // this file was missing
+
+
 #define MAXSIZE 100
 #include <iostream>
 using namespace std;
@@ -41,7 +48,7 @@ int main()
         cout << ("Connection error") << endl;
         return 1;
     }
-    cout << ("Enter the text\n");
+    cout << "Enter number: ";
 
     cin.getline(buff, MAXSIZE);// scanf("%s", buff);
     
