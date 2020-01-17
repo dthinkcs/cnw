@@ -20,7 +20,7 @@ using namespace std;
 
 #define MAXSIZE 100
 
-void sort(vector<int> arr) {
+void sel_sort(vector<int>& arr) {
     for (int i = 0; i < arr.size() - 1; i++) {
         int minIdx = i;
         for (int j = i + 1; j < arr.size(); j++) {
@@ -86,7 +86,7 @@ int main()
     int temp; // replace(str.begin(), str.end(), ':', ' ');  // replace ':' by ' '
     while (ss >> temp)
         arr.push_back(temp);
-    sort(arr); // WRITE OWN SORT FN sort(arr.begin(), arr.end())
+    sel_sort(arr); // WRITE OWN SORT FN sort(arr.begin(), arr.end())
 
     string ans = "Sorted array: ";
     for (int i = 0; i < arr.size(); i++) {
