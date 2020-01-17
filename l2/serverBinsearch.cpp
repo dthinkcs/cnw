@@ -21,9 +21,17 @@ using namespace std;
 #define MAXSIZE 100
 
 int search(vector<int> arr, int key) {
-    for (int i = 0; i < arr.size(); i++)
-        if (arr[i] == key) 
-            return i;
+    int low = 0;
+    int high = arr.size() - 1;
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        if (arr[mid] == key) 
+            return mid;
+        else if (arr[mid] < key) 
+            low = mid + 1;
+        else
+            high = mid - 1;
+    }
     return -1;
 }
 
