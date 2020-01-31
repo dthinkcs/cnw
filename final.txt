@@ -1,0 +1,4 @@
+Amazon
+Apple
+Microsoft
+Google
