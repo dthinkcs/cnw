@@ -63,6 +63,7 @@ int main()
 
     // recv function to receive the buff
     recedbytes = recv(sockfd, buff, sizeof(buff), 0);
+
     cout << buff << endl; //puts(buff);//printf("\n");
     close(sockfd);
 }

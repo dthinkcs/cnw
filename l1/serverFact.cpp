@@ -68,6 +68,13 @@ int main()
         close(newsockfd);
     }
 
+        // BUSINESS LOGIC
+    int n;
+    sscanf(buff, "%d", &n);
+    long long fact = factorial(n);
+    sscanf(fact, "%s", buff);
+    //cout << "Answer: " <<  << endl;
+
 
     sentbytes = send(newsockfd, buff, sizeof(buff), 0);
 
@@ -77,10 +84,6 @@ int main()
         close(newsockfd);
     }
 
-    // BUSINESS LOGIC
-    int n;
-    sscanf(buff, "%d", &n);
-    cout << "Answer: " << factorial(n) << endl;
 
 
 

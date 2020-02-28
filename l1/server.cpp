@@ -27,7 +27,7 @@ int main()
     serveraddr.sin_port = htons(3388);
     serveraddr.sin_addr.s_addr = htons(INADDR_ANY);
     retval = bind(sockfd, (struct sockaddr *)&serveraddr, sizeof(serveraddr));
-    if (retval == 1)
+    if (retval == -1)
     {
         printf("Binding error");
         close(sockfd);
